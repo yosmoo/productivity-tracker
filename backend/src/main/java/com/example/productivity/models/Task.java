@@ -1,19 +1,22 @@
 package com.example.productivity.models;
 
+import org.springframework.data.annotation.Id;
+
 public class Task {
-    private int id;
+    @Id
+    private String id;
     private String title;
 
-    public Task(int id, String title) {
+    public Task(String id, String title) {
         this.id = id;
         this.title = title;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
