@@ -5,10 +5,10 @@ import org.springframework.data.annotation.Id;
 public class Completion {
     @Id
     private String id;
-    private int taskId;
+    private String taskId;
     private String dayOfWeek;
 
-    public Completion(String id, int taskId, String dayOfWeek) {
+    public Completion(String id, String taskId, String dayOfWeek) {
         this.id = id;
         this.taskId = taskId;
         this.dayOfWeek = dayOfWeek;
@@ -22,11 +22,11 @@ public class Completion {
         this.id = id;
     }
 
-    public int getTaskId() {
+    public String getTaskId() {
         return taskId;
     }
 
-    public void setTaskId(int taskId) {
+    public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
 

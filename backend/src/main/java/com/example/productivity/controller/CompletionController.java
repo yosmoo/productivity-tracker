@@ -18,7 +18,7 @@ public class CompletionController {
 
     @PostMapping("/api/tasks/{id}/complete")
     public Completion completeTask(
-            @PathVariable int id,
+            @PathVariable String id,
             @RequestParam String dayOfWeek) {
         Completion completion = new Completion(null, id, dayOfWeek);
         return completionService.completeTask(completion);
@@ -26,7 +26,7 @@ public class CompletionController {
 
     @DeleteMapping("/api/tasks/{id}/complete")
     public void uncompleteTask(
-            @PathVariable int id,
+            @PathVariable String id,
             @RequestParam String dayOfWeek) {
         completionService.uncompleteTask(id, dayOfWeek);
     }

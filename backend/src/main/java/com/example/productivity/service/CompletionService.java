@@ -27,7 +27,7 @@ public class CompletionService {
         return null;
     }
 
-    public void uncompleteTask(int taskId, String dayOfweek) {
+    public void uncompleteTask(String taskId, String dayOfweek) {
         Optional<Completion> completion = completionRepository.findByTaskIdAndDayOfWeek(taskId, dayOfweek);
 
         if (completion.isPresent()) {
