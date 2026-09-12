@@ -6,7 +6,7 @@ export default function CatProgress({ percent }) {
     return (
         <img
             src={cat.image}
-            alt={'Котик'}
+            alt={'cat'}
             className="h-24 w-24 shrink-0 object-contain sm:h-28 sm:w-28"
         />
     );

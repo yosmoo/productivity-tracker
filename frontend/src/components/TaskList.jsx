@@ -9,7 +9,7 @@ export default function TaskList({
 		<section>
 			<div className="mb-3 flex items-center justify-between px-1">
 				<h2 className="font-semibold tracking-tight">
-					Задачи
+					Tasks
 				</h2>
 				<span className="text-sm text-neutral-400">
 					{completedIds.length}/{tasks.length}

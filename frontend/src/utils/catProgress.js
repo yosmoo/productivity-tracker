@@ -1,28 +1,28 @@
 const CATS = [
     {
         image: "/cats/cat1.jpg",
-        title: "Неделя только начинается",
-        text: "Ничего страшного. Главное — попробовать снова.",
+        title: "The Week Is Just Beginning",
+        text: "That's okay. The important thing is to try again.",
     },
     {
         image: "/cats/cat2.jpg",
-        title: "Уже лучше",
-        text: "Ты сделал несколько шагов. Продолжай в том же духе.",
+        title: "Already Better",
+        text: "You've taken a few steps. Keep it up.",
     },
     {
         image: "/cats/cat3.jpg",
-        title: "Хорошая неделя",
-        text: "Ты неплохо справился со своими задачами.",
+        title: "A Good Week",
+        text: "You've done a pretty good job with your tasks.",
     },
     {
         image: "/cats/cat4.jpg",
-        title: "Отличный результат",
-        text: "Ты действительно держишь свой ритм.",
+        title: "Great Result",
+        text: "You're really keeping your rhythm.",
     },
     {
         image: "/cats/cat5.jpg",
-        title: "Вау, продуктивность!",
-        text: "Ты выполнил большую часть задач. Так держать!",
+        title: "Wow, So Productive!",
+        text: "You've completed most of your tasks. Keep it up!",
     },
 ];
 
