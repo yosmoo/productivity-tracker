@@ -207,6 +207,7 @@ function App() {
 
             await loadData();
 
+			setSelectedDay("MONDAY");
             setShowResetConfirm(false);
             setShowWeeklySummary(false);
         } catch (error) {
