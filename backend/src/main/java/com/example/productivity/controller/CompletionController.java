@@ -1,7 +1,6 @@
 package com.example.productivity.controller;
 
 import com.example.productivity.models.Completion;
-import com.example.productivity.models.Task;
 import com.example.productivity.service.CompletionService;
 import org.springframework.web.bind.annotation.*;
 
