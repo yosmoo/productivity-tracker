@@ -6,6 +6,7 @@ import com.example.productivity.repository.CompletionRepository;
 import org.springframework.stereotype.Service;
 import com.example.productivity.repository.TaskRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -36,4 +37,11 @@ public class CompletionService {
 
     }
 
+    public List<Completion> getAllCompletions() {
+        return completionRepository.findAll();
+    }
+
+    public void resetWeek() {
+        completionRepository.deleteAll();
+    }
 }
