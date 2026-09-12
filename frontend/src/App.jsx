@@ -38,7 +38,6 @@ function App() {
         SUNDAY: [],
     });
 
-    // Load tasks, completions, and statistics
     const loadData = async () => {
         try {
             setLoading(true);
@@ -72,14 +71,6 @@ function App() {
 
             setTasks(tasksData);
             setWeeklyPercent(statisticsData);
-
-            // Convert completions from the API
-            // into the following format:
-            //
-            // {
-            //   MONDAY: ["taskId1", "taskId2"],
-            //   TUESDAY: [...]
-            // }
 
             const completedByDay = {
                 MONDAY: [],
@@ -181,7 +172,6 @@ function App() {
                 }));
             }
 
-            // Update statistics
             const statisticsResponse = await fetch(
                 `${API_URL}/statistics/week`
             );
@@ -197,7 +187,6 @@ function App() {
         }
     };
 
-    // Reset the entire week
     const resetWeek = async () => {
         try {
             setResetting(true);
@@ -216,8 +205,6 @@ function App() {
                 );
             }
 
-            // After a successful reset,
-            // reload everything from the backend
             await loadData();
 
             setShowResetConfirm(false);
