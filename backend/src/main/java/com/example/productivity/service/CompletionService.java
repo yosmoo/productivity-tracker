@@ -23,6 +23,14 @@ public class CompletionService {
         Optional<Task> task =
                 taskRepository.findById(completion.getTaskId());
         if (task.isPresent()) {
+            Optional<Completion> existing =
+                    completionRepository.findByTaskIdAndDayOfWeek(
+                            completion.getTaskId(),
+                            completion.getDayOfWeek()
+                    );
+            if (existing.isPresent()) {
+                return existing.get();
+            }
             return completionRepository.save(completion);
         }
         return null;
