@@ -25,17 +25,20 @@ public class StatisticsService {
     public List<Completion> getCompletions() {
         return completionRepository.findAll();
     }
-    public int getCompletesCount(){
+
+    public int getCompletesCount() {
         List<Completion> completions = getCompletions();
         return completions.size();
     }
-    public int getPossibleCount(){
+
+    public int getPossibleCount() {
         List<Task> tasks = getTasks();
-        return tasks.size()*7;
+        return tasks.size() * 7;
     }
-    public double getPercentage(){
+
+    public double getPercentage() {
         int completed = getCompletesCount();
         int possible = getPossibleCount();
-        return (double) completed / possible * 100;
+        return (int) Math.round((double) completed / possible * 100);
     }
 }
